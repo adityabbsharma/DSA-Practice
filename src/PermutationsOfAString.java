@@ -33,10 +33,30 @@ public class PermutationsOfAString {
     public static void main(String args[] ) throws Exception {
         BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         String s = read.readLine();
-        permutation(s, "");
+        permutation(s);
     }
-    public static void permutation(String str, String ans){
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    public static void permutation(String s) {
+        recursivePrint(s.toCharArray(), "");
+    }
+    public static void recursivePrint(char[] charArr, String left) {
+        int n = charArr.length;
+        if (n == 1) {
+            System.out.println(left + charArr[0]);
+            return;
+        }
+        for (int i = 0; i < n; i++) {
 
+            left = left + charArr[i];
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int j = 0; j < n; j++) {
+                if (i != j) {
+                    stringBuilder.append(charArr[j]);
+                }
+            }
+            char[] newCharArr = stringBuilder.toString().toCharArray();
+            recursivePrint(newCharArr, left);
+            left = left.substring(0, left.length() - 1);
+        }
     }
 }
