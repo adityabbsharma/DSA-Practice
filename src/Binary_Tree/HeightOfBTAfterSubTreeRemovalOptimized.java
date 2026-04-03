@@ -7,6 +7,8 @@ import java.util.*;
 import java.util.stream.Stream;
 
 /**
+ * HARD
+ * 2458. Height of Binary Tree After Subtree Removal Queries
  * Optimized solution for Height of Binary Tree After Subtree Removal Queries
  * 
  * Key insights:

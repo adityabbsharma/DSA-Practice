@@ -1,4 +1,5 @@
 /*
+ * HARD
  * 2458. Height of Binary Tree After Subtree Removal Queries
 Attempted
 Hard
